@@ -34,7 +34,9 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun PaginatedList(viewModel: PaginationViewModel) {
+fun PaginatedList(
+    viewModel: PaginationViewModel
+) {
     val items by viewModel.items.collectAsState()
     val isLoading by viewModel.isLoading.collectAsState()
     val listState = rememberLazyListState()
@@ -56,7 +58,11 @@ fun PaginatedList(viewModel: PaginationViewModel) {
         state = listState
     ) {
         items(items) {
-            UserProfileCard("Youlong", 21, "Android Developer", "Active")
+            UserProfileCard(
+                "Youlong",
+                21,
+                "Android Developer",
+                "Active")
         }
 
         item {
