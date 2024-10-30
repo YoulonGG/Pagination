@@ -18,7 +18,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun UserProfileCard(name: String, age: Int, position: String, status: String) {
+fun UserProfileCard(
+    name: String,
+    age: Int,
+    position: String,
+    status: String
+) {
     Card(
         modifier = Modifier
             .padding(horizontal = 20.dp)
